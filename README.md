@@ -1,47 +1,24 @@
-# アプリ名
-社内wiki掲示板
+# wiki-bord
 
-## 開発スケジュール
-10/15 発表会  
+## Project setup
+```
+npm install
+```
 
-7月技術選定  
-8月1週間程度→環境構築、とりあえず出来るところからつくってみる  
-9月引き続き
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
 
-## そのアプリを作ろうと思った理由
-動的サイトでよくある機能がどうやって作成されているのかを知るため
+### Compiles and minifies for production
+```
+npm run build
+```
 
-## 必要となる機能
+### Lints and fixes files
+```
+npm run lint
+```
 
-- ページ数
-  - トップページ（一覧）
-  - 詳細
-  - ログイン画面
-
-- must
-  - 投稿
-  - マークダウン対応
-  - 最終更新日の表示
-  - 目次
-  - 編集
-  - ログイン機能(一律同じIDとPASSを想定。)
-  - 検索(複数条件)
-  - 更新履歴
-- may
-  - プレビュー
-  - 差分
-  - IP制限
-
-## デザインカンプ
-https://xd.adobe.com/view/81c2514e-b7a8-4635-8164-ab9ea0e80ca0-d491/
-
-## ■メモ
-## 基本の形  
-フロント  
-- vue  
-- vuex
-
-サーバーサイド  
-firebase  
-google domainを利用する？（firebase hostingに）  
-https://qiita.com/tocomi/items/f7754a7ff05879fbb815
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
