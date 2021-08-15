@@ -1,18 +1,40 @@
 <template>
   <div class="login">
-    <form action="">
-      <input type="text">
-      <input type="text">
-    </form>
+    ログインしてください
+      <label for="">email:<input type="text" v-model="email"></label>
+      <label for="">PASS:<input type="text" v-model="password"></label>
+      <button @click="login">ログインする</button>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-
+import axios from "axios"; 
 export default {
   name: "Login",
-  components: {
+  data() {
+    return {
+      email:"",
+      password:""
+    }
   },
+  components: {},
+  methods: {
+    login() {
+      axios.post(`https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=${process.env.VUE_APP_FIREBASE_API_KEY}`,
+      {
+        email:this.email,
+        password:this.password,
+        returnSecureToken: true
+      })
+      .then((res)=>{
+        console.log(res)
+      })
+    }
+  }
 };
 </script>
+<style lang="scss">
+  label {
+    display: block;
+  }
+</style>
