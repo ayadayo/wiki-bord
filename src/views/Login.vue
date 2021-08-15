@@ -28,6 +28,8 @@ export default {
       })
       .then((res)=>{
         console.log(res)
+        this.$store.commit('updateToken',res.data.idToken)
+        this.$router.push('/wiki')
       })
     }
   }
